@@ -11,7 +11,7 @@ on:
 env:
   owner: jigyasapriyadarshini
   domain: github.io   
-  
+
 jobs:
   deploy-dev-test:
     name: Deploy to Dev test environment
