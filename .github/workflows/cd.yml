@@ -33,6 +33,7 @@ jobs:
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: build # The folder the action should deploy. 
+          
   deploy-prod:
     name: Deploy to Production environment
     needs: [deploy-dev-test]
@@ -54,5 +55,5 @@ jobs:
         with: 
           branch: gh-pages
           folder: build
-          token: 0d655a79c48ddc7d3c172ec181481c470ad60ceb
+          token: ${{ secrets.TOKEN }}
           repository-name: ${{ env.owner }}/${{ env.repo }}
